@@ -21,6 +21,13 @@
     footer {
         height: 300px;
     }
+    .section {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
     </style>
     <script>
         function foo() {
@@ -31,7 +38,7 @@
     </script>
 </head>
 <body>
-    <header>
+    <header class="section">
         <h1>Using HTML</h1>
         <h2>Using HTML</h2>
         <h3>Using HTML</h3>
@@ -59,7 +66,7 @@
         </ul>
     </div>
     <hr>
-    <div>
+    <div class="section">
         <span>Since we like to talk about the weather, let me be the weather guy and show you the next 7 days, using a <i>table</i></span>
     </br>
     </br>
@@ -127,7 +134,7 @@
         <p id="block">On the other hand, block element takes alllllllll the width it can.</p>
     </div>
     <hr>
-    <div>
+    <div class="section">
         <img src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/shushing-face.png" width="130" height="130">
         <h3>Is there any secret you'd like to share with me?</h3>
         <p>I promise I won't tell anyone </p>
