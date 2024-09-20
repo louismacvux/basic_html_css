@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <style>
+    #strong {
+        color:red
+    }
+    #b {
+        color: green
+    }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    #span, #block {
+        border: 2px red solid;
+    }
+    footer {
+        height: 300px;
+    }
+    </style>
+    <script>
+        function foo() {
+                let name = document.getElementById("confide").value;
+                document.getElementById("spill").innerHTML = name;
+                event.preventDefault();
+            }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Using HTML</h1>
+        <h2>Using HTML</h2>
+        <h3>Using HTML</h3>
+        <h4>Using HTML</h4>
+        <h5>Using HTML</h5>
+        <h6>Using HTML</h6>
+        <h7>... I wonder how small it can get...</h7>
+    </header>
+<hr>
+    <div>
+        <h2>This page will show the HTML tags taught in class 1 and 2</h2>
+        <ul>
+            <li>
+                This is the <a href="https://youtu.be/dQw4w9WgXcQ?si=tpaXV6xd7jzpZkwo" target="_main">link to UWinnipeg website</a>. It will be opened in a new tab. 
+            </li>
+            <li>
+                <h2><sup>Does this</sup>looks like<sub>a staircase?</sub></h2>
+                <small> It's because I use <code>sub</code> and <code>sup</code></small>
+            </li>
+        </br>
+            <li> 
+                This <strong id="strong">text</strong> uses <code>strong</code>, while this <b id="b">text</b> uses <code>b</code>. Do you see any difference? Cause I certainly don't.
+            </li>
+            
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <span>Since we like to talk about the weather, let me be the weather guy and show you the next 7 days, using a <i>table</i></span>
+    </br>
+    </br>
+        <table>
+            <thead>
+                <th>Day</th>
+                <th>Hi/Lo</th>
+                <th>Condition</th>
+                <th>Chances of rain</th>
+                <th>Wind</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fri 20</td>
+                    <td>22˚C/13˚</td>
+                    <td>Partly Cloudy</td>
+                    <td>3%</td>
+                    <td>W 19km/h</td>
+                </tr>
+                <tr>
+                    <td>Sat 21</td>
+                    <td>14˚/5˚</td>
+                    <td>AM Shower</td>
+                    <td>59%</td>
+                    <td>WNW 25km/h</td>
+                </tr>
+                <tr>
+                    <td>Sun 22</td>
+                    <td>17˚/9˚</td>
+                    <td>Mostly Sunny</td>
+                    <td>7%</td>
+                    <td>WNW 10km/h</td>
+                </tr>
+                <tr>
+                    <td>Mon 23</td>
+                    <td>19˚/9˚</td>
+                    <td>Mostly Cloudy</td>
+                    <td>3%</td>
+                    <td>S 16km/h</td>
+                </tr>
+                <tr>
+                    <td>Tue 24</td>
+                    <td>21˚/10˚</td>
+                    <td>Partly Cloudy</td>
+                    <td>6%</td>
+                    <td>WNW 10km/h</td>
+                </tr>
+                <tr>
+                    <td colspan="5">It's so boring typing these out so I quit after day 5 ¯\_(ツ)_/¯ </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3> But don't worry, I found something even better:</h3>
+        <p><small>Let's pretend that it's in Celsius</small></p>
+        <iframe
+            src="https://api.wo-cloud.com/content/widget/?geoObjectKey=2896011&language=en&region=US&timeFormat=HH:mm&windUnit=mph&systemOfMeasurement=imperial&temperatureUnit=fahrenheit"
+            name="CW2" scrolling="no" width="318" height="318" frameborder="0"
+            style="border: 1px solid #FFBE00;border-radius: 4px">
+        </iframe>
+    </div>
+    <hr>
+    <div>
+        <h3>This next part shows the difference between a block element and an inline <s>elment</s> element.</h3>
+        <span id="span"> Inline element only takes up as much width as necessary.</span>
+        <p id="block">On the other hand, block element takes alllllllll the width it can.</p>
+    </div>
+    <hr>
+    <div>
+        <img src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/shushing-face.png" width="130" height="130">
+        <h3>Is there any secret you'd like to share with me?</h3>
+        <p>I promise I won't tell anyone </p>
+        <div>
+            <h1 id="spill"></h1>
+        </div>
+        <form onsubmit="foo()">
+            <input id="confide" type="password" placeholder="Confide in me" size="50" />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>
