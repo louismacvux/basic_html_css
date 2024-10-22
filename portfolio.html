@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        let show1 = true;
+        let show2 = true;
+        function toggleCSS1() {
+            let title = document.getElementsByClassName("section-title");
+            let content = document.getElementsByClassName("section-content");
+            let nav = document.getElementsByClassName("nav-items");
+            let elements = [...title, ...content, ...nav];
+            if (show1) {
+                for (let i=0; i < elements.length; i++){
+                    elements[i].classList.add("box");
+                }
+            }else {
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].classList.remove("box");
+                }
+            }
+            show1 = !show1;
+        }
+        function toggleCSS2(){
+            let skill = document.getElementsByClassName("skill-column");
+            let content = document.getElementsByClassName("project-content");
+            let header = document.getElementsByClassName("project-header");
+            let elements = [...skill, ...content, ...header];
+            if (show2) {
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].classList.add("box1");
+                }
+            } else {
+                for (let i = 0; i < elements.length; i++) {
+                    elements[i].classList.remove("box1");
+                }
+            }
+            show2 = !show2;
+        }
+        function foo() {
+                let name = document.getElementById("name").value;
+                let email = document.getElementById("email").value;
+                let phone = document.getElementById("phone").value;
+                alert(`The form was submitted\nname= ${name}\nemail=${email}\nphone=${phone}`);
+            }
+    </script>
+    <title>My Portfolio</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo" style="margin-right: auto; color: aliceblue; font-weight: 700; font-size: 130%;">LONG VU</div>
+        <a class="nav-items" href="#skills">Skills</a>
+        <a class="nav-items" href="#project">Project</a>
+        <a class="nav-items" href="#education">Education</a>
+        <a class="nav-items" href="#contact">Contact</a>
+        <a class="nav-items " href="#experience">Experience</a>
+        <div class="dropdown nav-menu">
+            <button class="dropbtn">
+                <i class="fa fa-bars" style="font-size:large;"></i>
+            </button>
+            <div class="dropdown-content">
+                <a style="display: block;" href="#skills">Skills</a>
+                <a style="display: block;" href="#project">Project</a>
+                <a style="display: block;" href="#education">Education</a>
+                <a style="display: block;" href="#contact">Contact</a>
+                <a style="display: block;" href="#experience">Experience</a>
+            </div>
+        </div>
+        <div class="dropdown ">
+            <button class="dropbtn">
+                <i class="fa fa-cog" style="font-size:large;"></i>
+            </button>
+            <div class="dropdown-content">
+                <button style="display: block;" onclick="toggleCSS1()">Box1</button>
+                <button style="display: block;" onclick="toggleCSS2()">Box2</button>
+            </div>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="hero-text" >
+            <h3>Hello,</h3>
+            <h1>I am Long Vu</h1>
+            <h2>I'm a Software Developer</h2>
+        </div>
+    </div>
+    <div class="skills" id="skills">
+        <div class="section">
+            <div class="section-title">
+                SKILLS
+            </div>
+            <div class="section-content">
+                <div class="skill-flex">
+                    <div class="skill-column">
+                        <div class="skill-header">Proficient in</div>
+                        <div>Java</div>
+                        <div>Python</div>
+                        <div>JavaScript</div>
+                        <div>HTML</div>
+                        <div>REST API</div>
+                    </div>
+                    <div class="skill-column">
+                        <div class="skill-header">Familiar with</div>
+                        <div>NodeJS</div>
+                        <div>MongoDB</div>
+                        <div>ReactJS</div>
+                        <div>CSS</div>
+                        <div>SQL</div>
+                        <div>C</div>
+                    </div>
+                    <div id="certification" class="skill-column">
+                        <div class="skill-header">Certification</div>
+                        <div>SQL for Data Science (Coursera)</div>
+                        <div>Front-end Web UI Framework: Bootstrap (Coursera)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projects" id="project">
+        <div class="section">
+            <div class="section-title ">
+                PROJECT
+            </div>
+            <div class="section-content ">
+                <div class="project-flex">
+                    <div class="project-header ">
+                        <h3><a href="https://github.com/gurtejboparai/bookwyrm">BookWyrm</a></h3>
+                        <div class="time">2022</div>
+                    </div>
+                    <ul class="project-content">
+                        <li>Website to review books.</li>
+                        <li>Utilize MongoDB to store reviews and ratings.</li>
+                        <li>Business logic including routes, organizing Data Access Objects are managed by SpringBoot.</li>
+                        <li>Use BooksAPI by Google to search and add new books.</li>
+                        <li>Responsive front-end is created using Vue.js</li>
+                    </ul>
+                </div>
+                <div class="project-flex">
+                    <div class="project-header">
+                        <h3><a href="https://github.com/louismacvux/Blog-MERN">NoteBinder</a></h3>
+                        <span class="time">2024</span>
+                    </div>
+                    <ul class="project-content">
+                        <li>Live at <a id="highlight" href="https://notebinder.vercel.app" target="_main">notebinder.vercel.app</a></li>
+                        <li>A Online Note taking app using Markdown Editor</li>
+                        <li>Secured by session-based authentication using Google OAuth2.0</li>
+                        <li>React - Node.js - Express - MongoDB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <div class="education section">
+        <div class="section-title">
+            EDUCATION
+        </div>
+        <div class="section-content">
+            <div class="education-flex">
+                <div class="education-header">
+                    PACE @ UNIVERSITY OF WINNIPEG
+                </div>
+                <div>Diploma: Mobile Application Development</div>
+            </div>
+            <div class="education-flex">
+                <div class="education-header">
+                    UNIVERSITY OF MANITOBA
+                </div>
+                <div>Bachelor of Science</div>
+            </div>
+        </div>
+    </div>
+    <div class="contact section" id="contact">
+        <div class="section-title">CONTACT ME</div>
+        <br/>
+        <form onsubmit="foo()" class="section-content">
+            <div class="formField">
+                <label for="name">Name*</label>
+                <input type="text" id="name" placeholder="Put your name here" required>
+            </div>
+            <div class="formField">
+                <label for="email">Email*</label>
+                <input type="email" id="email" placeholder="example@email.com" required>
+            </div>
+            <div class="formField">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="123 456 7890" pattern="[0-9]{3} [0-9]{3} [0-9]{4}">
+            </div>
+            <div class="formField">
+                <label for="inquiry">Message*</label>
+                <textarea type="textarea" id="inquiry" placeholder="Your message" rows="6" cols="40"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="section test">
+       
+    </div>
+    <!-- <div class="section" style="align-items: center;">
+        <iframe src="https://notebinder.vercel.app" width="90%" height="500"></iframe>
+    </div> -->
+</body>
+</html>
