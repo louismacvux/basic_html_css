@@ -1,0 +1,214 @@
+@import url('https://fonts.cdnfonts.com/css/apercu');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Apercu', sans-serif;
+    font-weight: 300;
+    color: var(--text);
+    --text: rgb(215, 223, 230);
+    --highlight: rgb(0, 255, 213);
+    --nav: rgb(37, 42, 81);
+}
+
+.box {
+    border: 3px dotted rgb(253, 255, 237)
+}
+
+.box1 {
+    border: 2px dotted rgb(255, 251, 248)
+}
+.nav {
+    background-color: var(--nav);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 20px;
+    padding: 0px 20px;
+    position:sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.nav-menu{
+    display: none;
+}
+
+.hero {
+    height: 60vh;
+    position: relative;
+    background-color: rgb(32, 47, 122);
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    padding: 5% 10%;
+    color: aliceblue;
+    width: 100%;
+}
+
+a:visited {
+    color: rgb(214, 212, 212);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+a:link {
+    color: rgb(214, 212, 212);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+a:hover {
+    color: white;
+}
+
+#highlight {
+    color : var(--highlight);
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    padding: 10vh 5vw;
+    background-color: rgb(22, 31, 78);
+}
+
+.section-title {
+    color: var(--highlight);
+    align-self: start;
+    font-weight: 600;
+    font-size: 130%;
+    flex-basis: 25%;
+    flex-shrink: 0;
+    text-align: right;
+    padding-right: 2%;
+}
+
+.section-content {
+    padding: 0;
+    flex-shrink: 2;
+    flex-basis: 75%;
+}
+
+.project-flex,
+.skill-flex {
+    display: flex;
+    align-items: flex-start;
+}
+
+.project-flex {
+    justify-content: flex-start;
+}
+
+.project-flex, .education-flex{
+    margin-bottom: 20px;
+}
+
+.project-header {
+    flex-basis: 15%;
+    flex-shrink: 0;
+}
+
+.project-header h3, .project-flex ul {
+    margin: 0;
+}
+
+.skill-flex {
+    justify-content: space-between;
+}
+
+.skill-column {
+    width: 30%;
+}
+
+#certification {
+    flex-basis: 70%;
+}
+
+.skill-header, .project-header h3 a, .education-header{
+    color:aliceblue;
+    font-weight: 600;
+    font-size: 110%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    background-color: var(--nav);
+    color: var(--text);
+    border: 0px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--nav);
+    z-index: 1;
+}
+
+label,
+input {
+    float: left;
+}
+label {
+    width: 100px;
+    padding-top: 3px;
+}
+.formField {
+    clear: left;
+}
+@media (orientation:portrait) {
+    .nav-items{
+        display: none;
+    }
+    .nav-menu{
+        display: block;
+    }
+    .project-flex, .section {
+        flex-direction: column;
+    }
+    .section-title {
+        align-self: center;
+    }
+    .project-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .skill-column {
+        width: 100%;
+    }
+    .skill-header, .project-header, .education-header {
+        margin-top: 20px;
+    }
+    .project-flex,.education-flex {
+        margin-top: 0px;
+    }
+    #certification{
+        flex-basis: 100%;
+    }
+}
+.hero-text {
+    animation-name: example;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes example {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
