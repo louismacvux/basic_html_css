@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #cce3e2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .board {
+            display: grid;
+            grid-template-rows: repeat(3, 100px);
+            grid-template-columns: repeat(3, 100px);
+        }
+        .tile {
+            border: 2px black solid;
+        }
+        .inner-tile {
+            font-size: 200%;
+            line-height: 100px;
+            text-align: center;
+        }
+        .game {
+            margin-inline: auto;
+            width:fit-content;
+            border: 2px black solid;
+            border-radius: 20px;
+            padding: 70px 50px;
+            background-color: #fff;
+        }
+        .title, #reset, .result {
+            margin-inline: auto;
+            width:fit-content;
+        }
+        #reset {
+            margin-top: 30px;
+            padding: 10px 10px;
+            border-radius: 5px;
+            background-color:aquamarine;
+            cursor:pointer;
+        }
+        .win {
+            color: blue;
+        }
+        .stats {
+            display:flex;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <div class="game">
+        <h1 class="title">Tic-Tac-Toe</h1>
+        <div class="stats">
+            <div class="score">
+                <span>X: </span>
+                <span id="x"></span>
+            </div>
+            <div class="score">
+                <span>O: </span>
+                <span id="o"></span>
+            </div>
+        </div>
+        <div class="board">
+            <div class="tile" id="0"></div>
+            <div class="tile" id="1"></div>
+            <div class="tile" id="2"></div>
+            <div class="tile" id="3"></div>
+            <div class="tile" id="4"></div>
+            <div class="tile" id="5"></div>
+            <div class="tile" id="6"></div>
+            <div class="tile" id="7"></div>
+            <div class="tile" id="8"></div>
+        </div>
+        <h3 class="result"></h3>
+        <div id="reset">Reset</div>
+    </div>
+    <script src="tictactoe.js"></script>
+</body>
+</html>
