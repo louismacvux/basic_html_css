@@ -27,7 +27,7 @@ const questions = [
   {
     question: "What is the result of `5 % 3`?",
     options: ["1", "2", "3", "0"],
-    answer: 0,
+    answer: 1,
   },
   {
     question: 'What is the result of `"5" + 3`?',
@@ -123,13 +123,13 @@ function loadSidebar(){
         let ques = document.createElement("div");
         ques.classList.add("question-tile");
         let anchor = document.createElement("a");
+        anchor.classList.add("question-tile");
         anchor.setAttribute("href", `#question ${i}`);
         anchor.innerText = `${parseInt(i) + 1}`;
         ques.append(anchor);
-        sidebar.appendChild(ques);
+        sidebar.appendChild(anchor);
     }
 }
-
 
 loadSidebar();
 
