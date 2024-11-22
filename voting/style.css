@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    gap: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(233, 233, 233);
+}
+
+.polls, .add-polls {
+   background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.add-polls {
+    flex-basis: 33%;
+    height: 95vh;
+}
+
+.polls {
+    flex-basis:  65%;
+    height: 95vh;
+    overflow-y: scroll;
+}
+
+.options {
+    margin-left: auto;
+    width: 100%;
+
+}
+.option {
+    width: 90%;
+    border: 1px solid rgb(155, 155, 155);
+    margin: 3px 0px;
+    border-radius: 3px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.option-fill {
+    background-color: rgb(120, 164, 246);
+    width: 0%;
+    transition: width 0.5s ease;
+    white-space: nowrap;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input1 {
+    margin: 5px;
+    padding: 5px;
+    font-size: 110%;
+}
+
+button {
+    background-color: #0ea741;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 110%;
+}
+
+.question {
+    background-color: #dbdcdc5f;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 20px;
+}
+
+.question-title {
+text-align: center;
+}
+
