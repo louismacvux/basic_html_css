@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Product Page</title>
+    <link rel="stylesheet" href="productdetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="/Ecommerce/home.html">
+                    <h1 class="navbar-title">LoCo Shop</h1>
+                </a>
+                <div class="cart-icon">
+                    <a href="/Ecommerce/cart.html"><i class="fas fa-shopping-cart" style="color: #ffffff;"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="product-detail" id="product-detail">
+                <div class="product-photo"></div>
+                <div class="product-info">
+                    <div class="product-name"></div>
+                    <div class="product-price"></div>
+                    <div class="product-rating"></div></br>
+                    <div class="product-desc"></div>
+                    
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>© 2024 Bracelet Shop. All rights reserved.</p>
+        </footer>
+        <script src="function.js"></script>
+        <script>
+            // Get URL parameters
+                const urlParams = new URLSearchParams(window.location.search);
+                const productId = urlParams.get('productId');
+
+                // Find the product in your products array
+                const selected = products[productId]
+
+                if (selected) {
+                    displayProductDetail(selected);
+                }
+        </script>
+    </body>
+
+</html>
