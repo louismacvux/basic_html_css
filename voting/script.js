@@ -66,14 +66,14 @@ let polls = [
     options: [
       {
         option_name: "Yes",
-        count: 3,
+        count: 0,
       },
       {
         option_name: "No",
-        count: 2,
+        count: 1,
       },
     ],
-    votes: 5,
+    votes: 1,
   },
 ];
 
@@ -125,7 +125,9 @@ function loadPolls() {
         let optionFill = document.createElement("div")
         optionFill.classList.add("option-fill");
         optionFill.id = `${i}-${j}`
-        optionFill.innerHTML = o.option_name;
+        let option_name = document.createElement("p");
+        option_name.innerHTML = o.option_name;
+        optionFill.appendChild(option_name)
         option.addEventListener('click', (e) => {
             o.count++
             p.votes++
@@ -177,8 +179,7 @@ function addOptions(e) {
 }
 
 function handleSubmit() {
-  const new_q = document.getElementById("new-question");
-  const optionGroup = document.getElementById("new-options");
+  const new_q = document.getElementById("new-question").value;
 
   // Select all the input elements inside the "new-options" div
   const inputElements = document.querySelectorAll(".input1");
@@ -188,14 +189,14 @@ function handleSubmit() {
 
   // Output the values to the console
   const new_p = {
-    question: new_q.value, 
+    question: new_q, 
     options: [],
     votes: 0
   }
   inputValues.forEach((val) => {
     new_p.options.push({option_name: val, count: 0})
   })
-  debugger
+ 
   polls.push(new_p);
   loadPolls();
 
@@ -210,8 +211,9 @@ function loadAddPoll(){
     let addPoll = document.getElementsByClassName("add-polls")[0]
     let new_ques = document.createElement("input")
     new_ques.setAttribute("type", "text")
+    new_ques.required = true
     new_ques.id = "new-question"
-    new_ques.classList.add("input1");
+    new_ques.classList.add("input");
     new_ques.placeholder = new_poll.question
     
     let optionGroup = document.createElement("div")

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Sample</title>
+    <style>
+        .item {
+            display: flex;
+            align-items: center;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+    <style>
+        .gist {
+            margin:auto;
+            width: 70%;
+        }
+
+        body .gist .gist-data {
+        border-bottom: none;
+        border-radius: 6px 6px 0 0;
+        background-color: #f1f3f5;
+        }
+
+        body .gist .gist-meta {
+        border-top: 1px rgb(207, 207, 207) solid;
+        border-radius: 0 0 6px 6px;
+        }
+
+        body .gist .highlight {
+        background-color: transparent;
+        font-family: 'Droid Sans Mono', monospace;
+        font-size: 14px;
+        }
+
+        body .gist .highlight td {
+        padding: 5px 15px !important;
+        line-height: 1;
+        font-family: inherit;
+        font-size: inherit;
+        }
+
+        body .gist tr:first-child td {
+        padding-top: 15px !important;
+        }
+
+        @media (width <= 850px) {
+            .gist {
+            margin:auto;
+            width: 90%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
+        <div class="picture" id="picture"></div>
+        <div class="text">
+            <h2 class="title" id="title"></h2>
+            <h3 class="price" id="price"></h3>
+            <button class="add" id="btn">Add to Cart</button>
+        </div>
+    </div>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>d</li>
+        <li>e</li>
+    </ul>
+    <div style="display: none;">
+        <h3 style="text-align: center;">Copy and Paste code snippets to console to try out.</h3>
+        <h4 style="text-align: center;">Right Click ➡️ Inspect ➡️ Console</h4>
+        <script src="https://gist.github.com/louismacvux/e218b71281fa1c60b57158aac630ba5e.js"></script>
+    </div>
+    <button onclick="createSection()">new section</button>
+    <div id="content"></div>
+    <div data-role="student" data-user-id="456"></div>
+</body>
+<script src="jsample.js"></script>
+</html>
